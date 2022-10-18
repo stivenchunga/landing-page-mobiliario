@@ -1,5 +1,60 @@
-<header></header>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#inicio">Mobiliaria</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#inicio">Bienvenida</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#productos">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#dudas">Dudas</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <main>
-  <div>hola</div>
+  <div id="inicio" class="card text-center mx-auto" >
+    <div class="card-body">
+      <p class="card-text">Somos una empersa dedicada al alqiuiler de mobiliarios para toda clase de eventos</p>
+      <a href="#" class="btn btn-primary">Contactanos al 3XXXXXXXXX</a>
+    </div>
+  </div>
+
+  <div id="productos" class="pt-4">
+    <h2 class="d-flex flex-row align-items-center justify-content-center pb-0">Productos disponibles</h2>
+    <small class="text-muted d-flex flex-row align-items-center justify-content-center pb-4">* Precios unitarios por noche</small>
+    <div class="row cards d-flex flex-row align-items-center justify-content-center gap-5">
+      <div *ngFor="let item of productos" class="card" style="width: 16rem;">
+        <div class="card-body">
+          <h5 class="card-title text-center">{{item.nombre}}</h5>
+          <p class="card-text text-center">${{item.precio}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="dudas" class="p-4">
+    <h2 class="d-flex flex-row align-items-center justify-content-center pb-4">Sobre nuestro servicio</h2>
+    <div class="row d-flex flex-row align-items-center justify-content-center gap-3">
+      <div class="alert alert-primary d-flex flex-column align-items-center justify-content-center" style="width: 34rem;" role="alert">
+        <h3 class="text-center">¿Cuando debo realizar el pago?</h3>
+        <p class="text-center">La persona paga la totalidad de la plata y se le brindan el servicio</p>
+      </div>
+      <div class="alert alert-secondary d-flex flex-column align-items-center justify-content-center" style="width: 34rem;" role="alert">
+        <h3 class="text-center">¿Entregan a domicilio?</h3>
+        <p class="text-center">Se entrega en el lugar que ellos quieran y se recogen al otros día a las 8AM</p>
+      </div>
+      <div class="alert alert-success d-flex flex-column align-items-center justify-content-center" style="width: 34rem;" role="alert">
+        <h3 class="text-center">¿Quien responde si algun producto resulta dañado?</h3>
+        <p class="text-center">En caso de daño la persona que alquila cubre la totalidad del artículo daños</p>
+      </div>
+    </div>
+  </div>
 </main>
 <footer></footer>
